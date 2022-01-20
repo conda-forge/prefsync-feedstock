@@ -31,6 +31,7 @@ test:
 
 about:
   home: https://github.com/asmeurer/prefsync
+  license_file: LICENSE
   license: MIT
   summary: |
     A little tool to help synchronize Mac OS X plist files (used for
