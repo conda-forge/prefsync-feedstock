@@ -11,15 +11,16 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1001
-  skip: true  # [not osx]
-  script: python setup.py install
+  noarch: python
+  number: 1002
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   build:
-    - python
+    - pip
+    - python >=3.6
   run:
-    - python
+    - python >=3.6
 
 test:
   imports:
@@ -31,6 +32,7 @@ test:
 
 about:
   home: https://github.com/asmeurer/prefsync
+  license_file: LICENSE
   license: MIT
   summary: |
     A little tool to help synchronize Mac OS X plist files (used for
